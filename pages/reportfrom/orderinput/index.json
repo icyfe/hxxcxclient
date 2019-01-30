@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "ff-canvas": "../../../f2-canvas/f2-canvas"
+  },
+  "navigationBarTitleText": "接单投料入库表"
+}

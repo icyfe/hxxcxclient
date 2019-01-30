@@ -1,0 +1,29 @@
+<view class="page-body">
+  <view class='imagesize'>
+    <image class='bg_title' src='../../images/logo.png'></image>
+    <image class='title_img' src='../../images/title.png'></image>
+  </view>
+  <view class='welcome'>欢迎登陆</view>
+
+  <view class="page-section flex_row" style='margin-top:30px;'>
+    <view class="weui-cells__title color_black">OA工号:</view>
+    <view class="weui-cells weui-cells_after-title" style='width: 70%;'>
+      <view class="weui-cell weui-cell_input border_left_right">
+        <input class="weui-input" bindinput="getUsername" name="yumingip" maxlength="10" placeholder="请输入OA工号" />
+      </view>
+    </view>
+  </view>
+  <view class="page-section flex_row">
+    <view class="weui-cells__title color_black">OA密码:</view>
+    <view class="weui-cells weui-cells_after-title" style='width: 70%;'>
+      <view class="weui-cell weui-cell_input border_left_right">
+        <input class="weui-input" bindinput="getPassword" name="username" type="password" placeholder="请输入OA密码" />
+      </view>
+    </view>
+  </view>
+
+  <view style='padding: 20px'>
+    <button type="primary" size="{{primarySize}}" bindtap="submit"> 登陆 </button>
+  </view>
+
+</view>

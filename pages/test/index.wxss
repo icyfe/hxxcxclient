@@ -1,0 +1,9 @@
+/* pages/chart/line/index.wxss */
+page{
+  width: 100%
+}
+.ff-canvas {
+  width: auto;
+  height: 100%;
+  overflow-x: scroll
+}

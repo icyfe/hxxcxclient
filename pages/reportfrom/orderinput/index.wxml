@@ -1,0 +1,71 @@
+<view class="container">
+  <!-- 日期选择s -->
+  <view class="date-section">
+    <picker mode="date" bindchange='bindstartdate' value='{{stardate}}'>
+      <view class='startdate'>
+        开始时间：{{startdate}}
+      </view>
+    </picker>
+    <picker mode="date" bindchange='bindenddate' value='{{enddate}}'>
+      <view class='enddate'>
+        结束时间：{{enddate}}
+      </view>
+    </picker>
+  </view>
+  <view class="tip">*默认从当月1号数据开始显示,时间可自主选择</view>
+  <!-- 报表主体内容 -->
+  <view class="table">
+    <view class="table-head-fixed" hidden="{{isShow}}">
+      <view class="head-txt">日期</view>
+      <view class="head-txt">接单</view>
+      <view class="head-txt">发货</view>
+      <view class="head-txt">投料</view>
+      <view class="head-txt">入库</view>
+    </view>
+    <view class="table-head">
+      <view class="head-txt">日期</view>
+      <view class="head-txt">接单</view>
+      <view class="head-txt">发货</view>
+      <view class="head-txt">投料</view>
+      <view class="head-txt">入库</view>
+    </view>
+    <view class="table-body">
+      <block wx:for="{{listdata}}" wx:key="index" wx:if="{{listdata.length > 0}}">
+        <view class="item">
+          <text class="txt">{{item.transdate}}</text>
+          <text class="txt">{{item.orderQty}}</text>
+          <text class="txt">{{item.SendQty}}</text>
+          <text class="txt">{{item.stupQty}}</text>
+          <text class="txt">{{item.prodQty}}</text>
+        </view>
+      </block>
+      <block wx:if="{{total}}">
+        <view class="total-item">
+          <view class="total-txt">接单合计：</view>
+          <view class="total-number">{{total.orderQty}}</view>
+        </view>
+        <view class="total-item">
+          <view class="total-txt">发货合计：</view>
+          <view class="total-number">{{total.SendQty}}</view>
+        </view>
+        <view class="total-item">
+          <view class="total-txt">投料合计：</view>
+          <view class="total-number">{{total.stupQty}}</view>
+        </view>
+        <view class="total-item">
+          <view class="total-txt">入库合计：</view>
+          <view class="total-number">{{total.prodQty}}</view>
+        </view>
+      </block>
+    </view>
+     <view class="tip">*查询区间各项每天变化折线图</view>
+    <view class="ff-canvas">
+      <ff-canvas id="one" canvas-id="one" opts="{{ opts }}"></ff-canvas>
+    </view>
+    <view class="tip">*查询区间各项累计总和</view>
+    <view class="ff-canvas">
+      <ff-canvas id="two" canvas-id="two" opts="{{ twoopts }}"></ff-canvas>
+    </view>
+  </view>
+  <!-- 合计 -->
+</view>

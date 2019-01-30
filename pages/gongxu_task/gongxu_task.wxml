@@ -1,0 +1,33 @@
+<!--produce_manage.wxml-->
+<view class="container">
+  <view class="swiper-tab">
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">待开工</view>
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">生产中</view>
+    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">已完工</view>
+  </view>
+
+  <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
+
+    <swiper-item>
+      <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHeight}}px;" class="list" bindscrolltolower="bindDownLoad" bindscroll="scroll" bindscrolltoupper="refresh">
+        <view class="item mui-table-view padding10">
+          <view class="mui-table-view-cell">
+            <text class="mui-col-sm-4 mui-title">工序序号</text>
+            <text class="mui-col-sm-4 mui-title">工序代号</text>
+            <text class="mui-col-sm-4 mui-title">工序名称</text>
+          </view>
+        </view>
+        <view class="item mui-table-view" wx:for="{{list}}">
+          <view class="mui-table-view-cell">
+            <text class="mui-col-sm-4 produce_name">{{item.bo_seq}}</text>
+            <text class="mui-col-sm-4 produce_name">{{item.pt_no}}</text>
+            <text class="mui-col-sm-4 produce_name">{{item.pt_name}}</text>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+
+    <swiper-item>
+    </swiper-item>
+  </swiper>
+</view>

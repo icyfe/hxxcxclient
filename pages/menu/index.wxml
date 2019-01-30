@@ -1,0 +1,129 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="iphone-scrollcontainer">
+    <view class='imagesize'>
+      <image class='bg_title' src='../../images/logo.png'></image>
+      <image class='title_img' src='../../images/title.png'></image>
+    </view>
+
+    <!-- <view class='welcome'>功能选择</view> -->
+
+    <view class="springboard-items">
+      <view class="prow">
+        <view class='title_line'>
+          <image class='icon-img' src='../../images/phoneico/lookfrom.png'></image>
+          <text class="menu-title">ERP大数据</text>
+        </view>
+        <view class="item">
+          <view class="wrap" bindtap="jump" data-type='orderinput'>
+            <image class="t-icon-img" src="../../images/phoneico/reportfrom.png"></image>
+            <text class="ico_txt">接单发货投料入库表</text>
+          </view>
+          <view class="wrap" bindtap="jump" data-type='dailyoff-dutystatistics'>
+            <image class="t-icon-img" src="../../images/phoneico/jiedan.png"></image>
+            <text class="ico_txt">销售每日下单统计表</text>
+          </view>
+          <view class="wrap" bindtap="jump" data-type='dayshippingstatistics'>
+            <image class="t-icon-img" src="../../images/phoneico/send.png"></image>
+            <text class="ico_txt">销售每日发货统计表</text>
+          </view>
+        </view>
+      </view>
+
+      <!-- mes -->
+      <view class="prow">
+        <view class='title_line'>
+          <image class='icon-img' src='../../images/phoneico/lookpanel.png'></image>
+          <text class='menu-title'>MES实时看板</text>
+        </view>
+        <view class="item">
+          <view class="wrap" bindtap="jump" data-type='1'>
+            <image class="t-icon-img" src="../../images/phoneico/ggxcn.png"></image>
+            <text class="ico_txt">各工序产能</text>
+          </view>
+          <view class="wrap" bindtap="jump" data-type='1'>
+            <image class="t-icon-img" src="../../images/phoneico/fqccn.png"></image>
+            <text class="ico_txt">FQC员工产能</text>
+          </view>
+          <view class="wrap" bindtap="jump" data-type='1'>
+            <image class="t-icon-img" src="../../images/phoneico/ygcn.png"></image>
+            <text class="ico_txt">员工产能</text>
+          </view>
+          <view class="wrap" bindtap="jump" data-type='1'>
+            <image class="t-icon-img" src="../../images/phoneico/phgl.png"></image>
+            <text class="ico_txt">批合格率报表</text>
+          </view>
+        </view>
+        <!-- line -->
+        <view class="item">
+          <view class="wrap" bindtap="jump" data-type='1'>
+            <image class="t-icon-img" src="../../images/phoneico/ptl.png"></image>
+            <text class="ico_txt">批退率明细</text>
+          </view>
+          <view class="wrap" bindtap="jump" data-type='1'>
+            <image class="t-icon-img" src="../../images/phoneico/yhgl.png"></image>
+            <text class="ico_txt">月批合格率表</text>
+          </view>
+          <view class="wrap" bindtap="jump" data-type='1'>
+            <image class="t-icon-img" src="../../images/phoneico/wl.png"></image>
+            <text class="ico_txt">物料报表</text>
+          </view>
+          <view class="wrap" bindtap="jump" data-type='1'>
+            <image class="t-icon-img" src="../../images/phoneico/gdwip.png"></image>
+            <text class="ico_txt">工单WIP</text>
+          </view>
+        </view>
+        <!-- ggline -->
+        <view class="item">
+          <view class="wrap" bindtap="jump" data-type='1'>
+            <image class="t-icon-img" src="../../images/phoneico/lcdwip.png"></image>
+            <text class="ico_txt">流程单WIP</text>
+          </view>
+          <view class="wrap" bindtap="jump" data-type='1'>
+            <image class="t-icon-img" src="../../images/phoneico/xhwip.png"></image>
+            <text class="ico_txt">型号WIP</text>
+          </view>
+          <view class="wrap" bindtap="jump" data-type='1'>
+            <image class="t-icon-img" src="../../images/phoneico/gdgxsjmx.png"></image>
+            <text class="ico_txt">工单工序首检明细</text>
+          </view>
+          <view class="wrap" bindtap="jump" data-type='1'>
+            <image class="t-icon-img" src="../../images/phoneico/agvwlps.png"></image>
+            <text class="ico_txt">AGV物料配送报表</text>
+          </view>
+        </view>
+        <!-- fgline -->
+        <view class="item">
+          <view class="wrap" bindtap="jump" data-type='1'>
+            <image class="t-icon-img" src="../../images/phoneico/sczzl.png"></image>
+            <text class="ico_txt">生产周转率查询</text>
+          </view>
+          <view class="wrap" bindtap="jump" data-type='1'>
+            <image class="t-icon-img" src="../../images/phoneico/tjccdcl.png"></image>
+            <text class="ico_txt">贴胶产出达成率</text>
+          </view>
+          <view class="wrap" bindtap="jump" data-type='1'>
+            <image class="t-icon-img" src="../../images/phoneico/sgxchb.png"></image>
+            <text class="ico_txt">上工序出货报表</text>
+          </view>
+          <view class="wrap" bindtap="jump" data-type='1'>
+            <image class="t-icon-img" src="../../images/phoneico/ll.png"></image>
+            <text class="ico_txt">良率报表</text>
+          </view>
+        </view>
+        <!-- fgline -->
+        <view class="item">
+          <view class="wrap" bindtap="jump" data-type='1'>
+            <image class="t-icon-img" src="../../images/phoneico/jhsl.png"></image>
+            <text class="ico_txt">计划数量报表</text>
+          </view>
+          <view class="wrap" bindtap="jump" data-type='1'>
+            <image class="t-icon-img" src="../../images/phoneico/ztl.png"></image>
+            <text class="ico_txt">FQC直通率</text>
+          </view>
+        </view>
+        <!-- fgline -->
+      </view>
+    </view>
+  </view>
+</view>

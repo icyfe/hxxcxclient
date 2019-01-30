@@ -1,0 +1,91 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.93",
+	"appid": "wxd5a57ea9637fe452",
+	"projectname": "%E5%BC%98%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 8,
+			"list": [
+				{
+					"id": 0,
+					"name": "首页",
+					"pathName": "pages/menu/index",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "接单投入料报表",
+					"pathName": "pages/reportfrom/orderinput/index",
+					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "line",
+					"pathName": "pages/line/index",
+					"query": ""
+				},
+				{
+					"id": 3,
+					"name": "股价",
+					"pathName": "pages/sharesprice/index",
+					"query": ""
+				},
+				{
+					"id": 4,
+					"name": "test",
+					"pathName": "pages/test/index",
+					"query": ""
+				},
+				{
+					"id": 5,
+					"name": "每日下单统计",
+					"pathName": "pages/reportfrom/dailyoff-dutystatistics/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "swiper",
+					"pathName": "pages/gongxu_task/gongxu_task",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "每日发货统计",
+					"pathName": "pages/reportfrom/dayshippingstatistics/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "登入",
+					"pathName": "pages/index/index"
+				}
+			]
+		}
+	}
+}

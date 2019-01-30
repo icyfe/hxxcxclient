@@ -1,0 +1,134 @@
+.container {
+  width: calc(100% - 40rpx);
+  padding: 20rpx 20rpx 40rpx 20rpx;
+  height: auto;
+}
+
+.date-section {
+  width: 100%;
+  text-align: center;
+}
+
+.startdate {
+  margin: 0 auto;
+  width: 60%;
+  background: #00c777;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 24rpx;
+}
+
+.table-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+  border: 1px solid #333;
+  border-radius: 8rpx;
+  z-index: 99;
+}
+
+.title-item-t {
+  position: sticky;
+  top: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: #3367d6;
+  text-align: center;
+}
+
+.titr-txt {
+  color: #fff;
+  text-align: center;
+  width: 50%;
+  border-right: 1px solid #eee;
+}
+
+.titl-txt {
+  color: #fff;
+  text-align: center;
+  width: 50%;
+}
+
+.item-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.ib-txt {
+  color: #333;
+  text-align: left;
+  width: 50%;
+  margin-left: 10rpx;
+  border-right: 1px solid #eee;
+}
+
+.st-txt {
+  width: 40%;
+  background: #3367d6;
+  color: #fff;
+  border-right: 1px solid #eee;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.st-num {
+  width: 60%;
+  color: #333;
+  text-align: left;
+  margin-left: 10rpx;
+}
+
+.swiper-tab {
+  width: 100%;
+  border-bottom: 2rpx solid #eee;
+  text-align: center;
+  line-height: 80rpx;
+}
+
+.swiper-tab-list {
+  font-size: 30rpx;
+  display: inline-block;
+  width: 33.33%;
+  color: #000;
+}
+
+.on {
+  color: #f00;
+  border-bottom: 5rpx solid #f00;
+}
+
+.content {
+  height: 100%;
+  width: 100%;
+}
+
+.tip {
+  margin-top: 10rpx;
+  color: #f00;
+  font-size: 24rpx;
+  font-weight: 600;
+}
+
+.ff-canvas {
+  margin-top: 100rpx;
+  width: 100%;
+  height: 900rpx;
+  /* -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg); */
+}

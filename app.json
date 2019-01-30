@@ -1,0 +1,22 @@
+{
+  "pages": [
+    "pages/menu/index",
+    "pages/index/index",
+    "pages/gongdan_progress/gongdan_progress",
+    "pages/gongxu_task/gongxu_task",
+    "pages/gongcheng_liuzhuan/gongcheng_liuzhuan",
+    "pages/reportfrom/orderinput/index",
+    "pages/line/index",
+    "pages/sharesprice/index",
+    "pages/test/index",
+    "pages/reportfrom/dailyoff-dutystatistics/index",
+    "pages/reportfrom/dayshippingstatistics/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "navigationBarTitleText": "弘信HON移动端(EMS)",
+    "navigationBarTextStyle": "black",
+    "pageOrientation": "auto"
+  }
+}

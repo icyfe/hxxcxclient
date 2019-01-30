@@ -1,0 +1,142 @@
+/**index.wxss**/
+page {
+ background:url(https://wx.rtdsoft.com/app/images/desktop/desktopbg1.jpg); background-size:100%; background-repeat:no-repeat;overflow:auto;
+}
+.clearfix{ clear:both;}
+.bgcolor{ background-color:#FFFFFF}
+.kanbantable{white-space:nowrap;}
+.kanbantable .kanbantr .th{ 
+	text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    height: 14vh;
+	line-height: 14vh;
+	vertical-align: middle;
+	background-color: #0074A3;
+	white-space:nowrap;
+	border-collapse:collapse;
+	border:solid #999999 1px;
+	color:#FFFFFF;
+	white-space:nowrap;
+	width:130px;
+	display:inline-block;
+}
+.kanbantable .kanbantr .td{
+	text-align: center;
+	vertical-align: middle;
+	font-size: 12px;
+	font-weight:bold;
+	height: 15.7777777vh;
+	line-height: 15.7777777vh;
+	vertical-align: middle;
+	background-color:#393f4f;
+	border-collapse:collapse;
+	border:solid #999999 1px;
+	color:#FFFFFF;
+	white-space:nowrap;
+	width:130px;
+	display:inline-block;
+}
+.faliaobox{ width:100%;display:block;}
+.kanbantable .kanbantr .kanbanfirst{ background-color:#333333}
+.kanbantable .kanbantr .kanbanstatus{ color:#FF6600}
+.kanbantop{ background-color:#000000; color:#FFFFFF; padding:5px; font-size:13px;}
+.kanbantop .xleft{ text-align:left;}
+.kanbantop .right{ text-align:right;}
+.kanbantable .kanbantr .noborder{border:solid #333333 1px;border-right:solid #999999 1px;}
+.kanbantable .kanbantr .hasbottom{border-bottom:solid #999999 1px;}
+.kanbantable .kanbantr .nobottomborder{border-bottom:solid #333333 1px;}
+
+.kanbantable .kanbantr .kanban100{ color:#009900}
+.kanbantable .kanbantr .kanban90{ color:#FF6600}
+.kanbantable .kanbantr .kanban70{ color:#FF0000}
+.kanbantable .kanbantr .kanban50{ color:#0033CC}
+.kanbantable .kanbantr .kanban30{ color:#990099}
+.kanbantable .kanbantr .kanban0{ color:#00FFFF}
+.kanbantable .kanbantr .kanbanstatus {
+    font-size: 1.15em;
+}
+
+.flex_row{
+  display: flex;
+  flex: row;
+}
+
+.wid50{
+  width:50px;
+}
+
+.lights_white{
+	width: 20px; 
+	height: 20px;
+	margin:30px auto;
+	border-radius: 50%;
+	background:#ffffff;
+	-moz-animation:free 1s ease infinite;
+	-webkit-animation:free 1s ease infinite;
+	-o-animation:free 1s ease infinite;
+	-ms-animation:free 1s ease infinite;
+	animation:free 1s ease infinite;
+	background:-moz-linear-gradient(left top,#fff,#ffffff);
+	background:-webkit-linear-gradient(left top,#fff,#ffffff);
+	background:-o-linear-gradient(left top,#fff,#ffffff);
+	background:-ms-linear-gradient(left top,#fff,#ffffff);
+	background:linear-gradient(left top,#fff,#ffffff);
+	background: -webkit-gradient(left top,#fff,#ffffff);
+}
+.lights_green{
+    width: 20px; 
+    height: 20px;
+    margin:30px auto;
+    border-radius: 50%;
+    background:#a8d8a2;
+    -moz-animation:animations2 2s ease infinite;
+    -webkit-animation:animations2 2s ease infinite;
+    -o-animation:animations2 2s ease infinite;
+    -ms-animation:animations2 2s ease infinite;
+    animation:animations2 2s ease infinite;
+    background:-moz-linear-gradient(left top,#fff,#a8d8a2);
+    background:-webkit-linear-gradient(left top,#fff,#a8d8a2);
+    background:-o-linear-gradient(left top,#fff,#a8d8a2);
+    background:-ms-linear-gradient(left top,#fff,#a8d8a2);
+    background:linear-gradient(left top,#fff,#a8d8a2);
+    background: -webkit-gradient(left top,#fff,#a8d8a2);
+}
+
+.lights_red{
+    width: 20px; 
+    height: 20px;
+    margin:30px auto;
+    border-radius: 50%;
+    background:#ff0000;
+    -moz-animation:work 1s ease infinite;
+    -webkit-animation:work 1s ease infinite;
+    -o-animation:work 1s ease infinite;
+    -ms-animation:work 1s ease infinite;
+    animation:work 1s ease infinite;
+    background:-moz-linear-gradient(left top,#fff,#ff0000);
+    background:-webkit-linear-gradient(left top,#fff,#ff0000);
+    background:-o-linear-gradient(left top,#fff,#ff0000);
+    background:-ms-linear-gradient(left top,#fff,#ff0000);
+    background:linear-gradient(left top,#fff,#ff0000);
+    background: -webkit-gradient(left top,#fff,#ff0000);
+}
+
+.lights_bule{
+    width: 20px; 
+    height: 20px;
+    margin:30px auto;
+    border-radius: 50%;
+    background:#0EA5EA;
+    -moz-animation:work 1s ease infinite;
+    -webkit-animation:work 1s ease infinite;
+    -o-animation:work 1s ease infinite;
+    -ms-animation:work 1s ease infinite;
+    animation:work 1s ease infinite;
+    background:-moz-linear-gradient(left top,#fff,#0EA5EA);
+    background:-webkit-linear-gradient(left top,#fff,#0EA5EA);
+    background:-o-linear-gradient(left top,#fff,#0EA5EA);
+    background:-ms-linear-gradient(left top,#fff,#0EA5EA);
+    background:linear-gradient(left top,#fff,#0EA5EA);
+    background: -webkit-gradient(left top,#fff,#0EA5EA);
+}

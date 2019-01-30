@@ -1,0 +1,46 @@
+<!--produce_faliao.wxml-->
+<view class="container">
+	<view class="kanbantop">
+	  <view class="xleft mui-col-xs-6">当前时间︰<font style="color:#FF6600">{{time}}</font></view>
+	  <view class="right mui-col-xs-6">共<font id="total_record">{{total_record}}</font>条数据</view>
+	  <view class="cleaffix"></view>
+	</view>
+
+	<view class="mui-table-view mui-grid-view mui-grid-9 mui-data-bottom">
+			<view class="mui-table-view-cell mui-col-sm-7 kanbantable">
+				<view class="kanbantr">
+					<view class="th">工单号</view>
+					<view class="th">工单日期</view>
+					<view class="th">生产线</view>
+					<view class="th">产品名称</view>
+					<view class="th">生产数量</view>
+					<view class="th">报废数量</view>
+					<view class="th">完成数量</view>
+					<view class="th">待完成数量</view>
+					<view class="th">完成状态</view>
+				</view>
+				<view class="kanbantr">
+					<block wx:for="{{items}}" wx:for-item="cell" wx:key="id">
+						<view class="faliaobox">
+							<view class="td kanbanfirst">{{cell.sc_odno}}</view>
+							<view class="td">{{cell.sc_date}}</view>
+							<view class="td">{{cell.sc_prna}}</view>
+							<view class="td">{{cell.el_name}}</view>
+							<view class="td">{{cell.sc_qty}}</view>
+							<view class="td">{{cell.sc_bdqty}}</view>
+							<view class="td">{{cell.sc_dlqty}}</view>
+							<view class="td">{{cell.leaf_nunm}}</view>
+							<view class="td">
+							<view class="progress">
+							<span class="progress-t {{cell.status_color2}}" style="width:{{cell.produce_hegerate}}%;">
+							<span>{{cell.produce_hegerate}}%</span></span>
+							</view>
+							</view>
+						</view>
+					</block>
+				</view>
+			</view>
+	  </view>
+	
+	
+</view>

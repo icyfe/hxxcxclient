@@ -1,0 +1,4 @@
+<view>
+  <web-view src="https://emwap.eastmoney.com/quota/stock/index/3006572">
+  </web-view>
+</view>

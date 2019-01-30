@@ -1,0 +1,102 @@
+<!--produce_faliao.wxml-->
+<view class="container">
+	<view class="kanbantop">
+	  <view class="xleft mui-col-xs-6">当前时间︰<font style="color:#FF6600">{{time}}</font></view>
+	  <view class="right mui-col-xs-6">共<font id="total_record">{{total_record}}</font>条数据</view>
+	  <view class="cleaffix"></view>
+	</view>
+
+	<view class="mui-table-view mui-grid-view mui-grid-9 mui-data-bottom">
+			<view class="mui-table-view-cell mui-col-sm-7 kanbantable">
+				<view class="kanbantr">
+					<view class="th">{{titles.t_xh}}</view>
+					<view class="th">{{titles.t_cpxh}}</view>
+					<view class="th">{{titles.t_gdh}}</view>
+					<view class="th">{{titles.t_lcdh}}</view>
+					<view class="th">{{titles.t_ymb1}}</view>
+					<view class="th">{{titles.t_ymb2}}</view>
+					<view class="th">{{titles.t_ymb3}}</view>
+					<view class="th">{{titles.t_gwj1}}</view>
+					<view class="th">{{titles.t_gwj2}}</view>
+					<view class="th">{{titles.t_cxcq}}</view>
+					<view class="th">{{titles.t_ict}}</view>
+					<view class="th">{{titles.t_sl}}</view>
+				</view>
+        <view class="kanbantr">
+					<block wx:for="{{items}}" wx:for-item="cell" wx:key="id">
+						<view class="faliaobox">
+							<view class="td kanbanfirst">{{cell.xh}}</view>
+							<view class="td">{{cell.cpxh}}</view>
+							<view class="td">{{cell.gdh}}</view>
+							<view class="td">{{cell.lcdh}}</view>
+							<view class="td">
+                <view class="flex_row">
+                  <view class="wid50"><view class="{{cell.status_color1}}"></view></view>
+                  <view class="wid50">{{cell.ymb1_detail}}</view>
+                </view>
+              </view>
+							<view class="td">
+                <view class="flex_row">
+                  <view class="wid50"><view class="{{cell.status_color2}}"></view></view>
+                  <view class="wid50">{{cell.ymb2_detail}}</view>
+                </view>
+              </view>
+							<view class="td">
+                <view class="flex_row">
+                  <view class="wid50"><view class="{{cell.status_color3}}"></view></view>
+                  <view class="wid50">{{cell.ymb3_detail}}</view>
+                </view>
+              </view>
+							<view class="td">
+                <view class="flex_row">
+                  <view class="wid50"><view class="{{cell.status_color4}}"></view></view>
+                  <view class="wid50">{{cell.gwj1_detail}}</view>
+                </view>
+              </view>
+							<view class="td">
+                <view class="flex_row">
+                  <view class="wid50"><view class="{{cell.status_color5}}"></view></view>
+                  <view class="wid50">{{cell.gwj2_detail}}</view>
+                </view>
+              </view>
+							<view class="td">
+                <view class="flex_row">
+                  <view class="wid50"><view class="{{cell.status_color6}}"></view></view>
+                  <view class="wid50">{{cell.cxcq_detail}}</view>
+                </view>
+              </view>
+							<view class="td">
+                <view class="flex_row">
+                  <view class="wid50"><view class="{{cell.status_color7}}"></view></view>
+                  <view class="wid50">{{cell.ict_detail}}</view>
+                </view>
+              </view>
+							<view class="td">
+                <view class="flex_row">
+                  <view class="wid50"><view class="{{cell.status_color8}}"></view></view>
+                  <view class="wid50">{{cell.sl_detail}}</view>
+                </view>
+              </view>
+						</view>
+					</block>
+				</view>
+
+				<!-- <view class="kanbantr">
+					<block wx:for="{{items}}" wx:for-item="cell" wx:key="id">
+						<view class="faliaobox">
+							<view class="td kanbanfirst">{{cell.ck_no}}</view>
+							<view class="td">{{cell.ck_date}}</view>
+							<view class="td">{{cell.sc_prna}}</view>
+							<view class="td">{{cell.r_el_no}}</view>
+							<view class="td">{{cell.sc_qty}}</view>
+							<view class="td">{{cell.hege_num}}</view>
+							<view class="td">{{cell.re_qty}}</view>
+							<view class="td kanbanstatus {{cell.cell.status_color}}">{{cell.produce_hegerate}}%</view>
+						</view>
+					</block>
+				</view> -->
+			</view>
+	  </view>
+	
+	
+</view>

@@ -1,0 +1,364 @@
+<view class="container">
+  <!-- 时间选择 -->
+  <view class="date-section">
+    <picker mode="date" bindchange='bindstartdate' fields="month" value='{{stardate}}'>
+      <view class='startdate'>
+        选择月份：{{startdate}}
+      </view>
+    </picker>
+  </view>
+  <view class="swiper-tab">
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">报表</view>
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">图表</view>
+  </view>
+  <!-- 报表 -->
+  <view class="content" hidden='{{currentTab==1}}'>
+    <view class="tip">*单位/RMB</view>
+    <view class="table-wrap">
+      <view class="title-item-t">
+        <view class="titr-txt">
+          年签订合同总金额
+        </view>
+        <view class="titl-txt">
+          年实际发货总金额
+        </view>
+      </view>
+      <view class="item-body">
+        <view class="ib-txt ellipsis">
+          {{cloneformhead.TotalNowMoney}}
+        </view>
+        <view class="ib-txt ellipsis">
+          {{cloneformhead.TotalSendMoneyNow}}
+        </view>
+      </view>
+      <view class="item-body">
+        <view class='st-txt'>
+          年累计未交货金额
+        </view>
+        <view class="st-num ellipsis"> {{cloneformhead.leftMoney}}</view>
+      </view>
+    </view>
+    <!-- 月 -->
+    <view class="table-wrap">
+      <view class="title-item-t">
+        <view class="titr-txt">
+          每月累计合同总金额
+        </view>
+        <view class="titl-txt">
+          每月累计发货总金额
+        </view>
+      </view>
+      <view class="item-body">
+        <view class="ib-txt ellipsis">
+          {{cloneformhead.TotalMoney}}
+        </view>
+        <view class="ib-txt ellipsis">
+          {{cloneformhead.TotalSendMoney}}
+        </view>
+
+      </view>
+      <view class="item-body">
+        <view class='st-txt'>
+          成品库存金额
+        </view>
+        <view class="st-num ellipsis">{{cloneformhead.TotalStock}}</view>
+      </view>
+    </view>
+    <view class="table-wrap">
+      <view class="title-item-t">
+        <view class="titr-txt">
+          本月签订合同总金额
+        </view>
+        <view class="titl-txt">
+          本月每天发货总金额
+        </view>
+      </view>
+      <view class="item-body">
+        <view class="ib-txt ellipsis">
+          {{cloneformhead.TotalNowMoney}}
+        </view>
+        <view class="ib-txt ellipsis">
+          {{cloneformhead.SendMonthTotalMoney}}
+        </view>
+      </view>
+      <view class="item-body">
+        <view class='st-txt'>
+          HUB仓金额
+        </view>
+        <view class="st-num ellipsis">{{cloneformhead.StockTotal}}</view>
+      </view>
+      <view class="item-body">
+        <view class='st-txt'>
+          每天发货未税金额
+        </view>
+        <view class="st-num ellipsis">{{cloneformhead.NONTaxMoney}}(本月)</view>
+      </view>
+    </view>
+    <!-- 日累计 -->
+    <view class="tip">*日累计为每日所有业务部门数据总和</view>
+    <view class="table-wrap">
+      <view class="title-item-t">
+        <view class="titr-txt">
+          日期
+        </view>
+        <view class="titr-txt">
+          日累计
+        </view>
+      </view>
+      <!-- line -->
+      <block wx:for="{{cloneformbody}}" wx:key="index">
+        <view class="item-body">
+          <view class="ib-txt ellipsis">
+            {{item.iYearMonthDay}}
+          </view>
+          <view class="ib-txt ellipsis">
+            {{item.BusinissAll}}
+          </view>
+        </view>
+      </block>
+      <!-- line -->
+      <view class="item-body">
+        <view class='st-txt'>
+          月   
+
+        
+        </view>
+        <view class="st-num ellipsis">{{clonemonthtotal.BusinissAll}}</view>
+      </view>
+      <!-- line -->
+      <view class="item-body">
+        <view class='st-txt'>
+          本年累计
+        </view>
+        <view class="st-num ellipsis">{{cloneyeartotal.BusinissAll}}</view>
+      </view>
+    </view>
+    <!-- 业务分部1 -->
+    <view class="table-wrap">
+      <view class="title-item-t">
+        <view class="titr-txt">
+          日期
+        </view>
+        <view class="titr-txt">
+          业务部一
+        </view>
+      </view>
+      <!-- line -->
+      <block wx:for="{{cloneformbody}}" wx:key="index">
+        <view class="item-body">
+          <view class="ib-txt ellipsis">
+            {{item.iYearMonthDay}}
+          </view>
+          <view class="ib-txt ellipsis">
+            {{item.BusinessOne}}
+          </view>
+        </view>
+      </block>
+      <!-- line -->
+      <view class="item-body">
+        <view class='st-txt'>
+          月累计
+        </view>
+        <view class="st-num ellipsis">{{clonemonthtotal.BusinessOne}}</view>
+      </view>
+      <!-- line -->
+      <view class="item-body">
+        <view class='st-txt'>
+          本年累计
+        </view>
+        <view class="st-num ellipsis">{{cloneyeartotal.BusinessOne}}</view>
+      </view>
+    </view>
+    <!-- 业务部2 -->
+    <view class="table-wrap">
+      <view class="title-item-t">
+        <view class="titr-txt">
+          日期
+        </view>
+        <view class="titr-txt">
+          业务部二
+        </view>
+      </view>
+      <!-- line -->
+      <block wx:for="{{cloneformbody}}" wx:key="index">
+        <view class="item-body">
+          <view class="ib-txt ellipsis">
+            {{item.iYearMonthDay}}
+          </view>
+          <view class="ib-txt ellipsis">
+            {{item.BusinessTwo}}
+          </view>
+        </view>
+      </block>
+      <!-- line -->
+      <view class="item-body">
+        <view class='st-txt'>
+          月累计
+        </view>
+        <view class="st-num ellipsis">{{clonemonthtotal.BusinessTwo}}</view>
+      </view>
+      <!-- line -->
+      <view class="item-body">
+        <view class='st-txt'>
+          本年累计
+        </view>
+        <view class="st-num ellipsis">{{cloneyeartotal.BusinessTwo}}</view>
+      </view>
+    </view>
+    <!-- 业务费3 -->
+    <view class="table-wrap">
+      <view class="title-item-t">
+        <view class="titr-txt">
+          日期
+        </view>
+        <view class="titr-txt">
+          业务部三
+        </view>
+      </view>
+      <!-- line -->
+      <block wx:for="{{cloneformbody}}" wx:key="index">
+        <view class="item-body">
+          <view class="ib-txt ellipsis">
+            {{item.iYearMonthDay}}
+          </view>
+          <view class="ib-txt ellipsis">
+            {{item.BusinessThree}}
+          </view>
+        </view>
+      </block>
+      <!-- line -->
+      <view class="item-body">
+        <view class='st-txt'>
+          月累计
+        </view>
+        <view class="st-num ellipsis">{{clonemonthtotal.BusinessThree}}</view>
+      </view>
+      <!-- line -->
+      <view class="item-body">
+        <view class='st-txt'>
+          本年累计
+        </view>
+        <view class="st-num ellipsis">{{cloneyeartotal.BusinessThree}}</view>
+      </view>
+    </view>
+    <!-- 业务部4 -->
+    <view class="table-wrap">
+      <view class="title-item-t">
+        <view class="titr-txt">
+          日期
+        </view>
+        <view class="titr-txt">
+          业务部四
+        </view>
+      </view>
+      <!-- line -->
+      <block wx:for="{{cloneformbody}}" wx:key="index">
+        <view class="item-body">
+          <view class="ib-txt ellipsis">
+            {{item.iYearMonthDay}}
+          </view>
+          <view class="ib-txt ellipsis">
+            {{item.BusinessFour}}
+          </view>
+        </view>
+      </block>
+      <!-- line -->
+      <view class="item-body">
+        <view class='st-txt'>
+          月累计
+        </view>
+        <view class="st-num ellipsis">{{clonemonthtotal.BusinessFour}}</view>
+      </view>
+      <!-- line -->
+      <view class="item-body">
+        <view class='st-txt'>
+          本年累计
+        </view>
+        <view class="st-num ellipsis">{{cloneyeartotal.BusinessFour}}</view>
+      </view>
+    </view>
+    <!-- 业务部5 -->
+    <view class="table-wrap">
+      <view class="title-item-t">
+        <view class="titr-txt">
+          日期
+        </view>
+        <view class="titr-txt">
+          业务部五
+        </view>
+      </view>
+      <!-- line -->
+      <block wx:for="{{cloneformbody}}" wx:key="index">
+        <view class="item-body">
+          <view class="ib-txt ellipsis">
+            {{item.iYearMonthDay}}
+          </view>
+          <view class="ib-txt ellipsis">
+            {{item.BusinessFive}}
+          </view>
+        </view>
+      </block>
+      <!-- line -->
+      <view class="item-body">
+        <view class='st-txt'>
+          月累计
+        </view>
+        <view class="st-num ellipsis">{{clonemonthtotal.BusinessFive}}</view>
+      </view>
+      <!-- line -->
+      <view class="item-body">
+        <view class='st-txt'>
+          本年累计
+        </view>
+        <view class="st-num ellipsis">{{cloneyeartotal.BusinessFive}}</view>
+      </view>
+    </view>
+    <!-- 业务部6 -->
+    <view class="table-wrap">
+      <view class="title-item-t">
+        <view class="titr-txt">
+          日期
+        </view>
+        <view class="titr-txt">
+          业务部六
+        </view>
+      </view>
+      <!-- line -->
+      <block wx:for="{{cloneformbody}}" wx:key="index">
+        <view class="item-body">
+          <view class="ib-txt ellipsis">
+            {{item.iYearMonthDay}}
+          </view>
+          <view class="ib-txt ellipsis">
+            {{item.BusinessSix}}
+          </view>
+        </view>
+      </block>
+      <!-- line -->
+      <view class="item-body">
+        <view class='st-txt'>
+          月累计
+        </view>
+        <view class="st-num ellipsis">{{clonemonthtotal.BusinessSix}}</view>
+      </view>
+      <!-- line -->
+      <view class="item-body">
+        <view class='st-txt'>
+          本年累计
+        </view>
+        <view class="st-num ellipsis">{{cloneyeartotal.BusinessSix}}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 图表 -->
+  <view class="content" hidden='{{currentTab==0}}'>
+    <view class="tip">*{{startdate}}月每日累计下单柱状图</view>
+    <view class="ff-canvas">
+      <ff-canvas id="one" canvas-id="one" opts="{{ opts }}"></ff-canvas>
+    </view>
+    <view class="tip">*{{startdate}}月各业务部业绩占比</view>
+    <view class="ff-canvas">
+      <ff-canvas id="two" canvas-id="two" opts="{{ twoopts }}"></ff-canvas>
+    </view>
+  </view>
+</view>
